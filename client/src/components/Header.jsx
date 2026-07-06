@@ -48,13 +48,13 @@ const Header = () => {
         ? 'text-slate-700 hover:text-[#1b6b5f]'
         : 'text-white/90 hover:text-[#134941]';
 
-    const accentTone = isScrolled ? 'text-[#134941]' : 'text-[#f4d98b]';
+    const accentTone = isScrolled ? 'text-black' : 'text-black';
 
     return (
         <header
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled
                 ? 'py-2 sm:py-3 bg-white shadow-lg shadow-black/5'
-                : 'py-3 sm:py-4 lg:py-6 bg-[#004422]'
+                : 'py-3 sm:py-4 lg:py-6 bg-[#f5f8f7]'
                 }`}
         >
             <div className="mx-auto sm:px-12 md:px-6 flex justify-between items-center">
@@ -62,7 +62,7 @@ const Header = () => {
                 {/* Logo */}
                 <div className="flex-shrink-0">
                     <Link to="/">
-                        <h1 className={`text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wide transition-colors duration-300 ${isScrolled ? 'text-[#004422]' : 'text-white'}`}>
+                        <h1 className={`text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wide transition-colors duration-300 ${isScrolled ? 'text-[#004422]' : 'text-black'}`}>
                             Vezhambal
                         </h1>
                     </Link>
@@ -74,7 +74,7 @@ const Header = () => {
                         <Link
                             key={link.name}
                             to={link.path}
-                            className={`text-xs xl:text-sm uppercase tracking-widest transition-colors duration-300 whitespace-nowrap ${textTone}`}
+                            className={`text-xs xl:text-sm uppercase tracking-widest transition-colors duration-300 whitespace-nowrap text-black`}
                         >
                             {link.name}
                         </Link>
@@ -129,7 +129,7 @@ const Header = () => {
 
                 {/* Mobile/Tablet Menu Toggle — visible below lg */}
                 <button
-                    className={`lg:hidden p-2 -mr-2 ${isScrolled ? 'text-slate-900' : 'text-white'}`}
+                    className={`lg:hidden p-2 -mr-2 text-black`}
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     aria-label="Toggle menu"
                 >
